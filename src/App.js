@@ -46,7 +46,7 @@ class App extends Component {
   completePasswordless = otp => {
     const config = window.config || {internalOptions: {}};
     this.webAuth.passwordlessLogin({
-      ...config.internalOptions, 
+      ...config.extraParams, 
       email: this.state.email,
       verificationCode: otp,
       connection: 'email'
